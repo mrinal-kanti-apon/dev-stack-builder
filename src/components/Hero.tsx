@@ -19,7 +19,7 @@ export default function Hero() {
 
           <h1 className="text-4xl font-black leading-[1.08] tracking-tight text-slate-950 sm:text-5xl lg:text-6xl xl:text-7xl">
             Build Your Ideal
-            <span className="block bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">
+            <span className="block brand-gradient-text">
               Developer Stack
             </span>
           </h1>
@@ -33,7 +33,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
             <a
               href="#technologies"
-              className="rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 px-7 py-3.5 text-center text-sm font-bold text-white shadow-lg shadow-pink-200 transition hover:-translate-y-1 hover:shadow-xl"
+              className="rounded-full brand-gradient px-7 py-3.5 text-center text-sm font-bold text-white shadow-lg shadow-pink-200 transition hover:-translate-y-1 hover:shadow-xl"
             >
               Explore Technologies →
             </a>

@@ -92,7 +92,7 @@ const isAdded = (id: number) => {
 
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Build Your{" "}
-            <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">
+            <span className="brand-gradient-text">
               Perfect Stack
             </span>
           </h2>
@@ -126,7 +126,7 @@ const isAdded = (id: number) => {
         {!loading && !error && (
           <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
             {/* Technology grid */}
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {technologies.map((technology) => (
               <TechnologyCard
                 key={technology.id}

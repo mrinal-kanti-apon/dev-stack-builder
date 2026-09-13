@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TechnologySection from "./components/TechnologySection";
 import { ToastContainer } from "react-toastify";
+import Footer from "./components/Footer";
 
 function App() {
   
@@ -22,6 +23,9 @@ function App() {
         newestOnTop
         closeOnClick
       />
+
+      <Footer />
+      
     </div>
 
   );

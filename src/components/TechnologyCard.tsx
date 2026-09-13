@@ -61,7 +61,7 @@ const TechnologyCard = ({
           className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
             isAdded
               ? "cursor-not-allowed bg-slate-200 text-slate-500"
-              : "bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 text-white shadow-md hover:-translate-y-0.5 hover:shadow-lg"
+              : "brand-gradient text-white shadow-md hover:-translate-y-0.5 hover:shadow-lg"
           }`}
         >
           {isAdded ? "✓ Added to Stack" : "Add to Stack"}
