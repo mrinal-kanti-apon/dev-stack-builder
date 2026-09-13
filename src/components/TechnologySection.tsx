@@ -6,16 +6,16 @@ import TechnologyCard from "./TechnologyCard";
 
 const TechnologySection = () => {
   const [technologies, setTechnologies] = useState<Technology[]>([]);
-  const [selectedTechnologies, setSelectedTechnologies] = useState<Technology[]>(
-    [],
-  );
+  const [selectedTechnologies, setSelectedTechnologies] = useState<
+    Technology[]
+  >([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
     const loadTechnologies = async () => {
       try {
-        const response = await fetch("/public/data/technologies-data.json");
+        const response = await fetch("/data/technologies-data.json");
 
         if (!response.ok) {
           throw new Error("Failed to load technologies");
@@ -35,48 +35,46 @@ const TechnologySection = () => {
     loadTechnologies();
   }, []);
 
-const handleAddToStack = (technology: Technology) => {
-  const alreadyAdded = selectedTechnologies.some(
-    (item) => item.id === technology.id,
-  );
+  const handleAddToStack = (technology: Technology) => {
+    const alreadyAdded = selectedTechnologies.some(
+      (item) => item.id === technology.id,
+    );
 
-  if (alreadyAdded) {
-    toast.warning(`${technology.name} is already in your stack.`);
-    return;
-  }
+    if (alreadyAdded) {
+      toast.warning(`${technology.name} is already in your stack.`);
+      return;
+    }
 
-  setSelectedTechnologies([...selectedTechnologies, technology]);
+    setSelectedTechnologies([...selectedTechnologies, technology]);
 
-  toast.success(`${technology.name} added to your stack.`);
-};
+    toast.success(`${technology.name} added to your stack.`);
+  };
 
-const handleRemoveFromStack = (id: number) => {
-  const technology = selectedTechnologies.find(
-    (item) => item.id === id,
-  );
+  const handleRemoveFromStack = (id: number) => {
+    const technology = selectedTechnologies.find((item) => item.id === id);
 
-  setSelectedTechnologies(
-    selectedTechnologies.filter((item) => item.id !== id),
-  );
+    setSelectedTechnologies(
+      selectedTechnologies.filter((item) => item.id !== id),
+    );
 
-  if (technology) {
-    toast.info(`${technology.name} removed from your stack.`);
-  }
-};
+    if (technology) {
+      toast.info(`${technology.name} removed from your stack.`);
+    }
+  };
 
-const handleRemoveAll = () => {
-  if (selectedTechnologies.length === 0) {
-    return;
-  }
+  const handleRemoveAll = () => {
+    if (selectedTechnologies.length === 0) {
+      return;
+    }
 
-  setSelectedTechnologies([]);
+    setSelectedTechnologies([]);
 
-  toast.info("All technologies removed from your stack.");
-};
+    toast.info("All technologies removed from your stack.");
+  };
 
-const isAdded = (id: number) => {
-  return selectedTechnologies.some((item) => item.id === id);
-};
+  const isAdded = (id: number) => {
+    return selectedTechnologies.some((item) => item.id === id);
+  };
 
   return (
     <section
@@ -92,9 +90,7 @@ const isAdded = (id: number) => {
 
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Build Your{" "}
-            <span className="brand-gradient-text">
-              Perfect Stack
-            </span>
+            <span className="brand-gradient-text">Perfect Stack</span>
           </h2>
 
           <p className="mt-4 text-slate-600">
@@ -128,14 +124,13 @@ const isAdded = (id: number) => {
             {/* Technology grid */}
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {technologies.map((technology) => (
-              <TechnologyCard
-                key={technology.id}
-                technology={technology}
-                isAdded={isAdded(technology.id)}
-                onAdd={handleAddToStack}
-              />
-               ))
-               }
+                <TechnologyCard
+                  key={technology.id}
+                  technology={technology}
+                  isAdded={isAdded(technology.id)}
+                  onAdd={handleAddToStack}
+                />
+              ))}
             </div>
 
             {/* Your Stack */}
