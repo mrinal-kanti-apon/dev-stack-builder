@@ -57,7 +57,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2 sm:gap-3">
           <button
             type="button"
-            className="hidden text-sm font-semibold text-slate-700 transition hover:text-slate-950 sm:block"
+            className="text-xs font-semibold text-slate-700 transition hover:text-slate-950 sm:text-sm"
           >
             Sign In
           </button>
