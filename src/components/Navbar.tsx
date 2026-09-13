@@ -15,12 +15,12 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-3 px-5 sm:px-8 lg:px-10">
         {/* Mobile menu button */}
         <button
           type="button"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="btn btn-ghost btn-circle lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full text-slate-900 hover:bg-slate-100 lg:hidden"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
           {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -54,17 +54,17 @@ export default function Navbar() {
         </nav>
 
         {/* Auth buttons */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-3 sm:gap-4">
           <button
             type="button"
-            className="text-xs font-semibold text-slate-700 transition hover:text-slate-950 sm:text-sm"
+            className="whitespace-nowrap text-xs font-semibold text-slate-700 transition hover:text-slate-950 sm:text-sm"
           >
             Sign In
           </button>
 
           <button
             type="button"
-            className="brand-gradient rounded-full px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:px-5"
+            className="brand-gradient whitespace-nowrap rounded-full px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg sm:px-5"
           >
             Sign Up
           </button>
