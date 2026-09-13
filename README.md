@@ -10,7 +10,7 @@ The project presents technology information through clean, reusable UI component
 
 ## 🌐 Project Links
 
-- **Live Website:** `YOUR_NETLIFY_LINK`
+- - **Live Website:** https://ideal-development-stack.netlify.app/
 - **GitHub Repository:** `https://github.com/mrinal-kanti-apon/dev-stack-builder`
 
 ---
