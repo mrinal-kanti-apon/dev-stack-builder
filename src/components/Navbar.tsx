@@ -37,10 +37,7 @@ export default function Navbar() {
             alt="Dev Stack"
             className="h-10 w-auto object-contain"
           />
-
-          <span className="hidden text-xl font-extrabold tracking-tight text-slate-900 sm:inline">
-            Dev Stack
-          </span>
+          
         </a>
 
         {/* Desktop navigation */}
